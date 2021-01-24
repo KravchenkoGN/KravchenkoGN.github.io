@@ -199,7 +199,7 @@
       var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/kravchenkogn/ckk9inmil2dpr17p170sg8ynz',
-        center: [54.782635, 32.045251],
+        center: [55.18016410981169, 33.50722094548927],
         zoom: 13
       });
 
@@ -220,8 +220,8 @@
             },
             "properties": {
               "phoneFormatted": "(202) 234-7336", //Телефон
-              "address": "1471 P St NW", //Адрес
-              "city": "Washington DC", //Название объекта
+              "address": "1471 P St NW", //Название объекта
+              "city": "Washington DC", //Адрес
               "country": "United States", //Район, населенный пункт
               "crossStreet": "at 15th St NW" //Улица и дом
             }
@@ -233,15 +233,13 @@
             "geometry": {
               "type": "Point",
               "coordinates": [
-                54.782635, 32.045251
+                55.18016410981169, 33.50722094548927
               ]
             },
             "properties": {
               "phoneFormatted": "8 800 100 00 00",
-              "address": "215541, Сафоновский р-н, Прудки, Мира, 22",
-              "city": "Музей",
-              "country": "Сафоновский р-н, Прудки",
-              "crossStreet": "Мира, 22"
+              "address": "Музей",
+              "city": "215541, Сафоновский р-н, Прудки, Мира, 22"
             }
           },
           {
@@ -416,8 +414,8 @@
         if (popUps[0]) popUps[0].remove();
         var popup = new mapboxgl.Popup({closeOnClick: false})
           .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML('<h3>' + currentFeature.properties.city + '</h3>' +
-            '<h4>' + currentFeature.properties.address + '</h4>')
+          .setHTML('<h3>' + currentFeature.properties.address + '</h3>' +
+            '<h4>' + currentFeature.properties.city + '</h4>')
           .addTo(map);
       }
     </script>
